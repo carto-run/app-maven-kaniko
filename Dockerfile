@@ -10,5 +10,5 @@ FROM $BUILDER_IMAGE AS build
 
 FROM $RUNTIME_IMAGE AS runtime
 
-        COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar /demo.jar
-        CMD [ "/demo.jar" ]
+        COPY --from=build /target/app-maven-kaniko-0.0.1-SNAPSHOT.jar /app-maven-kaniko.jar
+        CMD [ "/app-maven-kaniko.jar" ]

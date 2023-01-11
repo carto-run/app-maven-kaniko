@@ -13,3 +13,18 @@ tanzu apps workload create app-maven-kaniko \
   --param dockerfile=./Dockerfile \
   --yes
 ```
+
+## Logs
+
+```
+tanzu apps workload tail app-maven-kaniko
+```
+
+## Configuration
+
+| Item            | Config                  |
+| --------------- | ----------------------- |
+| Scan Policy     | Default                 |
+| tap-values.yaml | na                      |
+| Supply Chain    | source-test-scan-to-url |
+
