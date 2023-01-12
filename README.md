@@ -1,5 +1,7 @@
 # app-maven-kaniko
 
+a maven/spring-boot application that uses kaniko to build the image.
+
 ## Creating the Workload
 
 ```
@@ -22,9 +24,10 @@ tanzu apps workload tail app-maven-kaniko
 
 ## Configuration
 
-| Item            | Config                  |
-| --------------- | ----------------------- |
-| Scan Policy     | Default                 |
-| tap-values.yaml | na                      |
-| Supply Chain    | source-test-scan-to-url |
+| Item            | Config                                                                                |
+| --------------- | ------------------------------------------------------------------------------------- |
+| Scan Policy     | [default](resources/scan-policy.yaml)                                                 |
+| Pipeline        | [developer-defined-tekton-pipeline](resources/developer-defined-tekton-pipeline.yaml) |
+| tap-values.yaml | na                                                                                    |
+| Supply Chain    | source-test-scan-to-url                                                               |
 
